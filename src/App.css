@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Times New Roman', serif;
+  line-height: 1.6;
+  color: #000;
+  padding: 20px;
+  background: #F9C74F;  /* Adjust the color to fit your design if needed */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header, section, footer {
+  background: #FFF;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.contact-info {
+  align-self: flex-end;
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1, h2, h3 {
+  color: #00008B;
+  font-weight: bold;
+}
+
+/* Section Layout */
+.section {
+  display: flex;
+  flex-direction: row;  /* Horizontal layout */
+  justify-content: space-between;  /* Space between header and description */
+  align-items: flex-start;  /* Align items at the start of the flex container */
+}
+
+.header {
+  flex: 1;  /* Takes up 1 part of the flex space */
+  text-align: left;
+}
+
+.description {
+  flex: 3;  /* Takes up 3 parts of the flex space, making it larger */
+  text-align: left;
+  padding-left: 20px;  /* Adds some space between header and description */
+}
+
+.job, .school {
+  margin-top: 10px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills-grid ul {
+  width: 30%;  /* Each list takes up approximately a third of the grid space */
+  list-style-type: none;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
 }
